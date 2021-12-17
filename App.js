@@ -50,6 +50,7 @@ function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       {/* Reset button */}
+      {/* Reset button */}
       <TouchableOpacity
         onPress={reset}
         style={{ height: 40, justifyContent: "center" }}
