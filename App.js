@@ -24,7 +24,7 @@ function HomeScreen({ navigation }) {
   }
 
   function addColor() {
-    // ... dots means spread operator. e.g.
+    // ... dots means spread operator.
     // list = [1, 2, 3]
     // newList = [...list, 4]
     // which is the same as newList = [1, 2, 3, 4]
@@ -50,7 +50,6 @@ function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       {/* Reset button */}
-      {/* Reset button */}
       <TouchableOpacity
         onPress={reset}
         style={{ height: 40, justifyContent: "center" }}
@@ -66,7 +65,12 @@ function HomeScreen({ navigation }) {
         <Text style={{ fontSize: 20, color: "red" }}>Add a new color</Text>
       </TouchableOpacity>
 
-      <FlatList data={colorArray} renderItem={renderItem} style={styles.list} />
+      <FlatList
+        data={colorArray}
+        renderItem={renderItem}
+        style={styles.list}
+        keyExtractor={(item) => item.id}
+      />
     </View>
   );
 }
